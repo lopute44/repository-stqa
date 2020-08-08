@@ -24,12 +24,14 @@ public class HWLessonFour extends TestBase {
         for (int i = 0; i < sizeListLi; i++) {
             itemsMenu = driver.findElements(By.cssSelector("#box-apps-menu-wrapper a"));
             itemsMenu.get(i).click();
+            assertTrue(isElementPresent(By.cssSelector("h1")));
             if (isElementPresent(By.cssSelector("#box-apps-menu-wrapper ul.docs"))) {
                 itemsMenu = driver.findElements(By.cssSelector("#box-apps-menu-wrapper ul.docs li"));
                 sizeListUl = itemsMenu.size();
                 for (int j = 0; j < sizeListUl; j++) {
                     itemsMenu = driver.findElements(By.cssSelector("#box-apps-menu-wrapper ul.docs li"));
                     itemsMenu.get(j).click();
+                    assertTrue(isElementPresent(By.cssSelector("h1")));
                 }
                 driver.get("http://localhost/litecart/admin/");
             }
