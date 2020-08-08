@@ -1,10 +1,10 @@
 MyFirstTest.java
  MyFirstTest
-TestLessonFour.java
- TestLessonFour
+HWLessonFour.java
+ HWLessonFour
 LessonSecond.java
  LessonSecond
 TestBase.java
  TestBase
-HWLessonFour.java
- HWLessonFour
+TestLessonFour.java
+ TestLessonFour

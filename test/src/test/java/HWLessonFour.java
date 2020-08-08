@@ -21,20 +21,19 @@ public class HWLessonFour extends TestBase {
         List<WebElement> itemsMenu = driver.findElements(By.cssSelector("#box-apps-menu-wrapper a"));
         int sizeListLi = itemsMenu.size();
         int sizeListUl;
-        for (int i = 0; i < sizeListLi; i++){
-            if (i != 4){
-                itemsMenu = driver.findElements(By.cssSelector("#box-apps-menu-wrapper a"));
-                itemsMenu.get(i).click();
-                if (isElementPresent(By.cssSelector("#box-apps-menu-wrapper ul.docs"))) {
+        for (int i = 0; i < sizeListLi; i++) {
+            itemsMenu = driver.findElements(By.cssSelector("#box-apps-menu-wrapper a"));
+            itemsMenu.get(i).click();
+            if (isElementPresent(By.cssSelector("#box-apps-menu-wrapper ul.docs"))) {
+                itemsMenu = driver.findElements(By.cssSelector("#box-apps-menu-wrapper ul.docs li"));
+                sizeListUl = itemsMenu.size();
+                for (int j = 0; j < sizeListUl; j++) {
                     itemsMenu = driver.findElements(By.cssSelector("#box-apps-menu-wrapper ul.docs li"));
-                    sizeListUl = itemsMenu.size();
-                    for (int j = 0; j < sizeListUl; j++){
-                        itemsMenu = driver.findElements(By.cssSelector("#box-apps-menu-wrapper ul.docs li"));
-                        itemsMenu.get(j).click();
-                    }
-                    driver.get("http://localhost/litecart/admin/");
+                    itemsMenu.get(j).click();
                 }
-            } else continue;
+                driver.get("http://localhost/litecart/admin/");
+            }
 
         }
+    }
 }
