@@ -4,18 +4,17 @@ import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.firefox.FirefoxBinary;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxProfile;
+import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class LessonSecond {
-    private WebDriver driver;
-    private WebDriverWait wait;
+import java.io.File;
 
-    @Before
-    public void start(){
-        driver = new ChromeDriver();
-        wait = new WebDriverWait(driver,10);
-    }
+public class LessonSecond extends TestBase {
 
     @Test
     public void logPassInAdminPanel(){
@@ -27,11 +26,7 @@ public class LessonSecond {
         wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.cssSelector("[alt='My Store']")));
     }
 
-    @After
-    public void stop(){
-        driver.quit();
-        driver = null;
-    }
+
 
 }
 
