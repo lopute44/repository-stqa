@@ -5,7 +5,7 @@ import static org.junit.Assert.assertFalse;
 
 public class TestLessonFour extends TestBase {
 
-    @Test
+    //@Test
     public void MyTest(){
         driver.get("https://www.google.ru/");
         driver.findElement(By.name("q")).sendKeys("webdriver");
