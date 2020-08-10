@@ -1,12 +1,14 @@
 MyFirstTest.java
  MyFirstTest
-TestLessonFour.java
- TestLessonFour
+HWLessonFour.java
+ HWLessonFour
 LessonSecond.java
  LessonSecond
 TestBase.java
  TestBase
-HWLessonFour.java
- HWLessonFour
 HomeWorkItemsOfLeftMenu.java
  HomeWorkItemsOfLeftMenu
+TestLessonFour.java
+ TestLessonFour
+HomeWorkCheckingLabel.java
+ HomeWorkCheckingLabel
