@@ -8,6 +8,7 @@ import org.openqa.selenium.firefox.FirefoxBinary;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxProfile;
 import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.io.File;
@@ -35,7 +36,7 @@ public class TestBase {
     @Before
     public void start(){
         driver = new ChromeDriver();
-        driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         wait = new WebDriverWait(driver,10);
     }
 
@@ -53,6 +54,14 @@ public class TestBase {
     public void clickOnItemOfMenu(By locator, String header){
         driver.findElement(locator).click();
         Assert.assertTrue(header.equals(driver.findElement(By.cssSelector("h1")).getText()));
+    }
+
+    public void loginIn(){
+        driver.findElement(By.name("username")).sendKeys("admin");
+        driver.findElement(By.name("password")).sendKeys("admin");
+        driver.findElement(By.name("remember_me")).click();
+        driver.findElement(By.name("login")).click();
+        wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.cssSelector("[alt='My Store']")));
     }
 
 }

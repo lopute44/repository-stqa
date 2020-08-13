@@ -2,13 +2,15 @@ MyFirstTest.java
  MyFirstTest
 HWLessonFour.java
  HWLessonFour
+HomeWorkItemsOfLeftMenu.java
+ HomeWorkItemsOfLeftMenu
 LessonSecond.java
  LessonSecond
 TestBase.java
  TestBase
-HomeWorkItemsOfLeftMenu.java
- HomeWorkItemsOfLeftMenu
-TestLessonFour.java
- TestLessonFour
 HomeWorkCheckingLabel.java
  HomeWorkCheckingLabel
+TestLessonFour.java
+ TestLessonFour
+HomeWorkCountries.java
+ HomeWorkCountries
