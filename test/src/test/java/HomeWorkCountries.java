@@ -20,7 +20,7 @@ public class HomeWorkCountries extends TestBase {
         String firstCountry;
         String secondCountry;
         WebElement zone;
-        
+
         for (int i = 0; i < size; i++){                                               //цикл по списку
             if (i < size - 1){                                                        //проверяем, что не последняя строка, что бы не выйти за пределы списка
                 firstCountry = rows.get(i).findElement(By.xpath("./td[5]")).getText();  //присваеваем значение первой страны

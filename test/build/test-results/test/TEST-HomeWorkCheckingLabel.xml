@@ -1,19 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="HomeWorkCountries" tests="2" skipped="0" failures="0" errors="0" timestamp="2020-08-13T01:41:54" hostname="LAPTOP-VKHKHC2I" time="89.616">
+<testsuite name="HomeWorkCheckingLabel" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-08-13T02:50:02" hostname="LAPTOP-VKHKHC2I" time="8.973">
   <properties/>
-  <testcase name="isCheckingGeoZone" classname="HomeWorkCountries" time="28.421"/>
-  <testcase name="isCheckingCountries" classname="HomeWorkCountries" time="61.195"/>
-  <system-out><![CDATA[]]></system-out>
+  <testcase name="checkingLabel" classname="HomeWorkCheckingLabel" time="8.973"/>
+  <system-out><![CDATA[true
+false
+true
+false
+true
+false
+true
+false
+true
+false
+true
+false
+true
+false
+true
+false
+true
+false
+true
+false
+true
+false
+]]></system-out>
   <system-err><![CDATA[SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
 SLF4J: Defaulting to no-operation (NOP) logger implementation
 SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
-Starting ChromeDriver 84.0.4147.30 (48b3e868b4cc0aa7e8149519690b6f6949e110a8-refs/branch-heads/4147@{#310}) on port 38764
+Starting ChromeDriver 84.0.4147.30 (48b3e868b4cc0aa7e8149519690b6f6949e110a8-refs/branch-heads/4147@{#310}) on port 26628
 Only local connections are allowed.
 Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
 ChromeDriver was started successfully.
-авг. 13, 2020 8:41:59 AM org.openqa.selenium.remote.ProtocolHandshake createSession
+авг. 13, 2020 9:50:07 AM org.openqa.selenium.remote.ProtocolHandshake createSession
 INFO: Detected dialect: W3C
-авг. 13, 2020 8:42:21 AM org.openqa.selenium.remote.http.WebSocket$Listener onError
+авг. 13, 2020 9:50:10 AM org.openqa.selenium.remote.http.WebSocket$Listener onError
 WARNING: Connection reset
 java.net.SocketException: Connection reset
 	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:345)
@@ -31,11 +52,5 @@ java.net.SocketException: Connection reset
 	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
 	at java.base/java.lang.Thread.run(Thread.java:832)
 
-Starting ChromeDriver 84.0.4147.30 (48b3e868b4cc0aa7e8149519690b6f6949e110a8-refs/branch-heads/4147@{#310}) on port 20464
-Only local connections are allowed.
-Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
-ChromeDriver was started successfully.
-авг. 13, 2020 8:42:25 AM org.openqa.selenium.remote.ProtocolHandshake createSession
-INFO: Detected dialect: W3C
 ]]></system-err>
 </testsuite>

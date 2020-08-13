@@ -14,22 +14,10 @@ public class HomeWorkCheckingLabel extends TestBase{
     public void checkingLabel(){
         driver.get("http://localhost/litecart");
 
-        checkingLabelOnElement(By.cssSelector("#box-most-popular li"), By.cssSelector("#box-most-popular li [class^=sticker]"));  //проверяем блок популярные предложения
-        checkingLabelOnElement(By.cssSelector("#box-campaigns li"), By.cssSelector("#box-campaigns li [class^=sticker]"));               //проверяем блок акций
-        checkingLabelOnElement(By.cssSelector("#box-latest-products li"), By.cssSelector("#box-latest-products li [class^=sticker]"));   //проверяем блок с отсатками
-
-    }
-
-    /**
-     * Проверка контейнера со списком предложений на наличие стикеров
-     * @param locator  локатор контейнера
-     * @param locatorOfLabel локатор стикера в контейнере
-     */
-    public void checkingLabelOnElement(By locator, By locatorOfLabel){
-        List<WebElement> itemsProduct = driver.findElements(locator);
+        List<WebElement> itemsProduct = driver.findElements(By.cssSelector(".product"));
         for (WebElement we : itemsProduct){
-            assertTrue(isLabelPresent(we, locatorOfLabel));
-            assertFalse(areLabelsPresent(we, locatorOfLabel));
+            assertTrue(isLabelPresent(we, By.cssSelector("[class^=sticker]")));
+            assertFalse(areLabelsPresent(we, By.cssSelector("[class^=sticker]")));
         }
     }
 
