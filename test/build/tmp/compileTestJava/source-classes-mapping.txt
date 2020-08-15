@@ -8,9 +8,11 @@ LessonSecond.java
  LessonSecond
 TestBase.java
  TestBase
-HomeWorkItemsOfLeftMenu.java
- HomeWorkItemsOfLeftMenu
-TestLessonFour.java
- TestLessonFour
 HomeWorkCheckingLabel.java
  HomeWorkCheckingLabel
+TestLessonFour.java
+ TestLessonFour
+HomeWorkItemsOfLeftMenu.java
+ HomeWorkItemsOfLeftMenu
+LessonFivePropertiesOfProduct.java
+ LessonFivePropertiesOfProduct

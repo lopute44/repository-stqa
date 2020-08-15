@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="LessonFivePropertiesOfProduct" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-08-15T02:39:31" hostname="LAPTOP-VKHKHC2I" time="9.469">
+  <properties/>
+  <testcase name="checkPropertiesOfProduct" classname="LessonFivePropertiesOfProduct" time="9.469"/>
+  <system-out><![CDATA[Yellow Duck $20 $18 rgb(102, 102, 102)
+line-through rgb(204, 0, 0) 700
+18
+Yellow Duck
+]]></system-out>
+  <system-err><![CDATA[SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+1597459172941	geckodriver	INFO	Listening on 127.0.0.1:34520
+1597459173996	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\loput\\AppData\\Local\\Temp\\rust_mozprofileliHyN9"
+1597459174714	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1597459174715	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
+1597459174715	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1597459174715	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+JavaScript error: undefined, line 14: Error: An unexpected error occurred
+JavaScript error: moz-extension://98f8ae58-a8a7-4b2e-a70d-9f4f8af0203f/lib/picture_in_picture_overrides.js, line 15: Error: Incorrect argument types for pictureInPictureParent.setOverrides.
+JavaScript error: resource:///modules/sessionstore/SessionStore.jsm, line 1325: uncaught exception: 2147746065
+1597459177262	Marionette	INFO	Listening on port 57387
+1597459177611	Marionette	WARN	TLS certificate errors will be ignored for this session
+авг. 15, 2020 9:39:37 AM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+]]></system-err>
+</testsuite>
