@@ -16,3 +16,5 @@ HomeWorkItemsOfLeftMenu.java
  HomeWorkItemsOfLeftMenu
 LessonFivePropertiesOfProduct.java
  LessonFivePropertiesOfProduct
+LessonSixAuthorization.java
+ LessonSixAuthorization

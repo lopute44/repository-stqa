@@ -36,12 +36,12 @@ public class TestBase {
 
     @Before
     public void start(){
-        driver = new FirefoxDriver();
+        driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         wait = new WebDriverWait(driver,10);
     }
 
-    @After
+    //@After
     public void stop(){
         driver.quit();
         driver = null;
