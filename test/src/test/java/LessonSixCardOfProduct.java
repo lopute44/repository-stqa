@@ -36,7 +36,7 @@ public class LessonSixCardOfProduct extends TestBase{
         driver.findElement(By.name("quantity")).clear();
         driver.findElement(By.name("quantity")).sendKeys("10");
 
-        File file = new File("D:/IdeaProjects/stqa/repository-stqa/test/src/test/java/images/cat.jpg");
+        File file = new File("src/test/resources/images/cat.jpg");
         driver.findElement(By.cssSelector("input[name='new_images[]']")).sendKeys(file.getAbsolutePath());
 
         driver.findElement(By.name("date_valid_from")).sendKeys(Keys.HOME + "20.08.2020");

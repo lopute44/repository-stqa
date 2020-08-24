@@ -12,11 +12,11 @@ HomeWorkCheckingLabel.java
  HomeWorkCheckingLabel
 TestLessonFour.java
  TestLessonFour
-LessonSixAuthorization.java
- LessonSixAuthorization
+LessonSixCardOfProduct.java
+ LessonSixCardOfProduct
 HomeWorkItemsOfLeftMenu.java
  HomeWorkItemsOfLeftMenu
 LessonFivePropertiesOfProduct.java
  LessonFivePropertiesOfProduct
-LessonSixCardOfProduct.java
- LessonSixCardOfProduct
+LessonSixAuthorization.java
+ LessonSixAuthorization

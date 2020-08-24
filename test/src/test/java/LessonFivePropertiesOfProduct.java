@@ -1,8 +1,12 @@
 import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.json.JsonOutput;
+
+import java.awt.*;
 
 import static org.junit.Assert.*;
+import static org.openqa.selenium.support.Color.fromString;
 
 public class LessonFivePropertiesOfProduct extends TestBase {
     @Test
@@ -16,20 +20,24 @@ public class LessonFivePropertiesOfProduct extends TestBase {
         String campaignPriceMain = itemOfProduct.findElement(By.cssSelector(".campaign-price")).getText();
 
         String colorRegular = itemOfProduct.findElement(By.cssSelector(".regular-price")).getCssValue("color");
-        assertTrue(colorRegular.contains("119, 119, 119"));
+        colorRegular = colorRegular.replaceAll("[rgba()]", "");
+        String[] colorReg = colorRegular.split(",");
+        assertTrue(colorReg[0].equals(colorReg[1].substring(1)) & colorReg[1].substring(1).equals(colorReg[2].substring(1)));
 
         String textDecorationRegular = itemOfProduct.findElement(By.cssSelector(".regular-price")).getCssValue("text-decoration");
         assertTrue(textDecorationRegular.contains("line-through"));
 
         String colorCampaign = itemOfProduct.findElement(By.cssSelector(".campaign-price")).getCssValue("color");
-        assertTrue(colorCampaign.contains("204, 0, 0"));
+        colorCampaign = colorCampaign.replaceAll("[rgba()]", "");
+        String[] colorCamp = colorCampaign.split(",");
+        assertTrue(colorCamp[1].equals(" 0") & colorCamp[2].equals(" 0"));
 
         String textDecorationCampaign = itemOfProduct.findElement(By.cssSelector(".campaign-price")).getCssValue("font-weight");
         assertTrue(textDecorationCampaign.contains("00"));
 
-        int sizePriceRegular = Integer.parseInt(itemOfProduct.findElement(By.cssSelector(".regular-price")).getAttribute("offsetHeight"));
-        int sizePriceCampaign = Integer.parseInt(itemOfProduct.findElement(By.cssSelector(".campaign-price")).getAttribute("offsetHeight"));
-        assertTrue(sizePriceCampaign > sizePriceRegular);
+        String sizePriceRegular = itemOfProduct.findElement(By.cssSelector(".regular-price")).getCssValue("font-size");
+        String sizePriceCampaign = itemOfProduct.findElement(By.cssSelector(".campaign-price")).getCssValue("font-size");
+        assertTrue(Float.parseFloat(sizePriceCampaign.substring(0, sizePriceCampaign.length()-2)) > Float.parseFloat(sizePriceRegular.substring(0, sizePriceRegular.length()-2)));
 
         //проверка свойств элементов на странице продукта
         itemOfProduct.click();
@@ -44,26 +52,26 @@ public class LessonFivePropertiesOfProduct extends TestBase {
         assertTrue(campaignPriceMain.equals(campaignPriceProduct));
 
         colorRegular = driver.findElement(By.cssSelector(".regular-price")).getCssValue("color");
-        assertTrue(colorRegular.contains("102, 102, 102"));
+        colorRegular = colorRegular.replaceAll("[rgba()]", "");
+        colorReg = colorRegular.split(",");
+        assertTrue(colorReg[0].equals(colorReg[1].substring(1)) & colorReg[1].substring(1).equals(colorReg[2].substring(1)));
+
 
         textDecorationRegular = driver.findElement(By.cssSelector(".regular-price")).getCssValue("text-decoration");
         assertTrue(textDecorationRegular.contains("line-through"));
 
         colorCampaign = driver.findElement(By.cssSelector(".campaign-price")).getCssValue("color");
-        assertTrue(colorCampaign.contains("204, 0, 0"));
+        colorCampaign = colorCampaign.replaceAll("[rgba()]", "");
+        colorCamp = colorCampaign.split(",");
+        assertTrue(colorCamp[1].equals(" 0") & colorCamp[2].equals(" 0"));
 
         textDecorationCampaign = driver.findElement(By.cssSelector(".campaign-price")).getCssValue("font-weight");
         assertTrue(textDecorationCampaign.contains("700"));
 
-        sizePriceRegular = Integer.parseInt(driver.findElement(By.cssSelector(".regular-price")).getAttribute("offsetHeight"));
-        sizePriceCampaign = Integer.parseInt(driver.findElement(By.cssSelector(".campaign-price")).getAttribute("offsetHeight"));
-        assertTrue(sizePriceCampaign > sizePriceRegular);
+        sizePriceRegular = driver.findElement(By.cssSelector(".regular-price")).getCssValue("font-size");
+        sizePriceCampaign = driver.findElement(By.cssSelector(".campaign-price")).getCssValue("font-size");
+        assertTrue(Float.parseFloat(sizePriceCampaign.substring(0, sizePriceCampaign.length()-2)) > Float.parseFloat(sizePriceRegular.substring(0, sizePriceRegular.length()-2)));
 
-
-
-        System.out.println(nameMain + " " + regularPriceMain + " " + campaignPriceMain + " " + colorRegular);
-        System.out.println(textDecorationRegular + " " + colorCampaign + " " + textDecorationCampaign);
-        System.out.println(sizePriceRegular);
-        System.out.println(nameProduct);
     }
+
 }

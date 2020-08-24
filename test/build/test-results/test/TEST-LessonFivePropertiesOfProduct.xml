@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="LessonFivePropertiesOfProduct" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-08-24T13:36:37" hostname="LAPTOP-VKHKHC2I" time="14.983">
+  <properties/>
+  <testcase name="checkPropertiesOfProduct" classname="LessonFivePropertiesOfProduct" time="14.983"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+Starting MSEdgeDriver 84.0.524.0 (fb5da7c609f3529f2226ce6495ab263a95db1d98) on port 46214
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping MSEdgeDriver safe.
+MSEdgeDriver was started successfully.
+авг. 24, 2020 8:36:45 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+]]></system-err>
+</testsuite>
