@@ -20,3 +20,5 @@ LessonFivePropertiesOfProduct.java
  LessonFivePropertiesOfProduct
 LessonSixAuthorization.java
  LessonSixAuthorization
+LessonSevenCart.java
+ LessonSevenCart
