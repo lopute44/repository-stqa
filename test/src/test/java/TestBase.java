@@ -9,6 +9,8 @@ import org.openqa.selenium.firefox.FirefoxBinary;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxProfile;
 import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.support.events.AbstractWebDriverEventListener;
+import org.openqa.selenium.support.events.EventFiringWebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -16,7 +18,7 @@ import java.io.File;
 import java.util.concurrent.TimeUnit;
 
 public class TestBase {
-    public WebDriver driver;
+    public EventFiringWebDriver driver;
     public WebDriverWait wait;
 
     public boolean isElementPresent(By locator) {
@@ -34,9 +36,27 @@ public class TestBase {
         return driver.findElements(locator).size() > 0;
     }
 
+    public static class MyListener extends AbstractWebDriverEventListener {
+        @Override
+        public void beforeFindBy(By by, WebElement element, WebDriver driver) {
+            System.out.println(by);
+        }
+
+        @Override
+        public void afterFindBy(By by, WebElement element, WebDriver driver) {
+            System.out.println(by +  " found");
+        }
+
+        @Override
+        public void onException(Throwable throwable, WebDriver driver) {
+            System.out.println(throwable);
+        }
+    }
+
     @Before
     public void start(){
-        driver = new ChromeDriver();
+        driver = new EventFiringWebDriver(new ChromeDriver());
+        //driver.register(new MyListener());
         driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         wait = new WebDriverWait(driver,10);
     }
@@ -46,6 +66,7 @@ public class TestBase {
         driver.quit();
         driver = null;
     }
+
 
     /**
      * Клик по элементу и сравнение загловка h1

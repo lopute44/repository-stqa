@@ -4,16 +4,20 @@ HomeWorkCountries.java
  HomeWorkCountries
 TestBase.java
  TestBase
+ TestBase$MyListener
 HomeWorkCheckingLabel.java
  HomeWorkCheckingLabel
-LessonSixAuthorization.java
- LessonSixAuthorization
+LessonSevenNewWindows.java
+ LessonSevenNewWindows
+ LessonSevenNewWindows$1
 LessonSevenCart.java
  LessonSevenCart
 HWLessonFour.java
  HWLessonFour
 LessonSecond.java
  LessonSecond
+LessonSixAuthorization.java
+ LessonSixAuthorization
 TestLessonFour.java
  TestLessonFour
 LessonSixCardOfProduct.java
@@ -22,6 +26,5 @@ HomeWorkItemsOfLeftMenu.java
  HomeWorkItemsOfLeftMenu
 LessonFivePropertiesOfProduct.java
  LessonFivePropertiesOfProduct
-LessonSevenNewWindows.java
- LessonSevenNewWindows
- LessonSevenNewWindows$1
+LessonTenLogBrowser.java
+ LessonTenLogBrowser
