@@ -1,15 +1,19 @@
 MyFirstTest.java
  MyFirstTest
-HWLessonFour.java
- HWLessonFour
 HomeWorkCountries.java
  HomeWorkCountries
-LessonSecond.java
- LessonSecond
 TestBase.java
  TestBase
 HomeWorkCheckingLabel.java
  HomeWorkCheckingLabel
+LessonSixAuthorization.java
+ LessonSixAuthorization
+LessonSevenCart.java
+ LessonSevenCart
+HWLessonFour.java
+ HWLessonFour
+LessonSecond.java
+ LessonSecond
 TestLessonFour.java
  TestLessonFour
 LessonSixCardOfProduct.java
@@ -18,7 +22,6 @@ HomeWorkItemsOfLeftMenu.java
  HomeWorkItemsOfLeftMenu
 LessonFivePropertiesOfProduct.java
  LessonFivePropertiesOfProduct
-LessonSixAuthorization.java
- LessonSixAuthorization
-LessonSevenCart.java
- LessonSevenCart
+LessonSevenNewWindows.java
+ LessonSevenNewWindows
+ LessonSevenNewWindows$1
